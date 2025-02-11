@@ -6,7 +6,7 @@
 **A Machine Learning Framework to Facilitate the Synthesis of 2D Covalent Organic Frameworks**
 
 ## Content
-### **Prediction Module**
+### **Prediction Task**
 `python MlCOFSyn/negen1o_ui/NEgen1_start.py`
 
 **After startup, the left panel is used for initializing parameters, while the right panel is for generating addition lists. Clicking on the list allows the generation of different types of addition lists.**
@@ -16,13 +16,13 @@
 **Finally, click "Output" in the "DataProcessing" section to view all corresponding result details and crystal distributions.**
 ![image4](https://github.com/studentgpt/test1/blob/3733c2ca3381163b403e7604c96d81fef48f1719/image/Negen1o_4.png?raw=true)
 
-### **Bayesain Module**
+### **Bayesain Task**
 
 `python MlCOFSyn/bayesian/main_ui_optimization.py `
 **After launching `main_ui_optimization.py`, entering the initialization parameters will redirect you to the optimization page. Input the required reaction    space and termination conditions, then click "Start Bayesian Optimization" to initiate the optimization process.**
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/bayesian_1.png)
 
-### **Design Module**
+### **Design Task**
 `python MlCOFSyn/design/multibax-sklearn-main/main_ui_design.py `
 After launching `main_ui_design.py`, entering the initialization parameters will redirect you to the Design page. Input the required optimization space and the corresponding termination conditions, then click ""Start Bayesian Design " to initiate the optimization process.	
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/design1.png)
