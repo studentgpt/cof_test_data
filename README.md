@@ -21,6 +21,8 @@
 **After launching `main_ui_optimization.py`, entering the initialization parameters will redirect you to the optimization page. Input the required reaction    space and termination conditions, then click "Start Bayesian Optimization" to initiate the optimization process.**
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/bayesian_1.png)
 
-design
-negen1o_ui
+### **Design Module**
+`python MlCOFSyn/design/multibax-sklearn-main/main_ui_design.py `
+After launching `main_ui_design.py`, entering the initialization parameters will redirect you to the Design page. Input the required optimization space and the corresponding termination conditions, then click ""Start Bayesian Design " to initiate the optimization process.	
+![bayesian1](https://github.com/studentgpt/test1/blob/main/image/design1.png)
 
