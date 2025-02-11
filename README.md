@@ -13,7 +13,7 @@
 ![image2](https://github.com/studentgpt/test1/blob/3733c2ca3381163b403e7604c96d81fef48f1719/image/Negen1o_2.png?raw=true)
 **Enter the sequence in the "NEgen1oOutput" section to obtain the final output result.**
 ![image3](https://github.com/studentgpt/test1/blob/3733c2ca3381163b403e7604c96d81fef48f1719/image/NEgen1p_3.png?raw=true)
-**Finally, click "Output" in the "DataProcessing" section to view all corresponding result details and direct distributions.**
+**Finally, click "Output" in the "DataProcessing" section to view all corresponding result details and crystal distributions.**
 ![image4](https://github.com/studentgpt/test1/blob/3733c2ca3381163b403e7604c96d81fef48f1719/image/Negen1o_4.png?raw=true)
 
 ### **Bayesain Module**
