@@ -17,8 +17,11 @@
 ![image4](https://github.com/studentgpt/test1/blob/3733c2ca3381163b403e7604c96d81fef48f1719/image/Negen1o_4.png?raw=true)
 
 ### **Bayesain Module**
+
 `python MlCOFSyn/bayesian/main_ui_optimization.py `
+**After launching `main_ui_optimization.py`, entering the initialization parameters will redirect you to the optimization page. Input the required reaction    space and termination conditions, then click "Start Bayesian Optimization" to initiate the optimization process.**
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/bayesian_1.png)
+
 design
 negen1o_ui
 
