@@ -29,4 +29,4 @@ After launching `main_ui_design.py`, entering the initialization parameters will
 
 
 ## Reference
-[1] Chitturi, S. R.; Ramdas, A.; Wu, Y.; Rohr, B.; Ermon, S.; Dionne, J.; Jornada, F. H. da; Dunne, M.; Tassone, C.; Neiswanger, W.; Ratner, D. Targeted Materials Discovery Using Bayesian Algorithm Execution. _npj Comput. Mater._ **2024**, _10_ (1), 156.[https://github.com/studentgpt/test1/blob/main/README.md]
+[1] Chitturi, S. R.; Ramdas, A.; Wu, Y.; Rohr, B.; Ermon, S.; Dionne, J.; Jornada, F. H. da; Dunne, M.; Tassone, C.; Neiswanger, W.; Ratner, D. Targeted Materials Discovery Using Bayesian Algorithm Execution. _npj Comput. Mater._ **2024**, _10_ (1), 156. https://doi.org/10.1038/s41524-024-01326-2
