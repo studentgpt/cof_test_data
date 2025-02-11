@@ -10,9 +10,12 @@
 
 **After startup, the left panel is used for initializing parameters, while the right panel is for generating addition lists. Clicking on the list allows the generation of different types of addition lists.**
 ![image1](https://github.com/studentgpt/test1/blob/3733c2ca3381163b403e7604c96d81fef48f1719/image/NEgen1o_1.png)
-**Enter the sequence in the "NEgen1Output" section to obtain the final output result.**
-
+![image2](https://github.com/studentgpt/test1/blob/3733c2ca3381163b403e7604c96d81fef48f1719/image/Negen1o_2.png?raw=true)
+**Enter the sequence in the "NEgen1oOutput" section to obtain the final output result.**
+![image3](https://github.com/studentgpt/test1/blob/3733c2ca3381163b403e7604c96d81fef48f1719/image/NEgen1p_3.png?raw=true)
 **Finally, click "Output" in the "DataProcessing" section to view all corresponding result details and direct distributions.**
+![image4](https://github.com/studentgpt/test1/blob/3733c2ca3381163b403e7604c96d81fef48f1719/image/Negen1o_4.png?raw=true)
+
 ### **Bayesain Module**
 `python `
 
