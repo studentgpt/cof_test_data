@@ -1,3 +1,4 @@
+
 # MlCOFSyn
 <img alt="Static Badge" src="https://img.shields.io/badge/c++-8.1.0-red?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/python-3.12-blue?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/PyQt5-green?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/sklearn-1.4.2-black?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/numpy-1.26.4-pink?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/pandas-2.2.2-orange?style=flat">
 
@@ -26,3 +27,6 @@
 After launching `main_ui_design.py`, entering the initialization parameters will redirect you to the Design page. Input the required optimization space and the corresponding termination conditions, then click ""Start Bayesian Design " to initiate the optimization process.	
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/design1.png)
 
+
+### **Reference**
+[1] Chitturi, S. R.; Ramdas, A.; Wu, Y.; Rohr, B.; Ermon, S.; Dionne, J.; Jornada, F. H. da; Dunne, M.; Tassone, C.; Neiswanger, W.; Ratner, D. Targeted Materials Discovery Using Bayesian Algorithm Execution. _npj Comput. Mater._ **2024**, _10_ (1), 156.
