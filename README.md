@@ -29,6 +29,6 @@ After launching `main_ui_design.py`, entering the initialization parameters will
 
 
 ## Reference
-[1] Chitturi, S. R.; Ramdas, A.; Wu, Y.; Rohr, B.; Ermon, S.; Dionne, J.; Jornada, F. H. da; Dunne, M.; Tassone, C.; Neiswanger, W.; Ratner, D. Targeted Materials Discovery Using Bayesian Algorithm Execution. _npj Comput. Mater._ **2024**, _10_ (1), 156. https://doi.org/10.1038/s41524-024-01326-2
+[1] Chitturi, S. R.; Ramdas, A.; Wu, Y.; Rohr, B.; Ermon, S.; Dionne, J.; Jornada, F. H. da; Dunne, M.; Tassone, C.; Neiswanger, W.; Ratner, D. Targeted Materials Discovery Using Bayesian Algorithm Execution. _npj Comput. Mater._ **2024**, _10_ (1), 156. https://doi.org/10.1038/s41524-024-01326-2 github:https://github.com/src47/multibax-sklearn
 
-[2] Tian, J.; Treaster, K. A.; Xiong, L.; Wang, Z.; Evans, A. M.; Li, H. Taming Two-Dimensional Polymerization by a Machine-Learning Discovered Crystallization Model. Angew. Chem. Int. Ed. 2024, 63 (39), e202408937. https://doi.org/10.1002/anie.202408937
+[2] Tian, J.; Treaster, K. A.; Xiong, L.; Wang, Z.; Evans, A. M.; Li, H. Taming Two-Dimensional Polymerization by a Machine-Learning Discovered Crystallization Model. Angew. Chem. Int. Ed. 2024, 63 (39), e202408937. https://doi.org/10.1002/anie.202408937 github: https://github.com/Tia-tie-zhu/NEgen1.git
