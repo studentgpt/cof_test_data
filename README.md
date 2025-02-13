@@ -1,7 +1,11 @@
 
 # MlCOFSyn
 <img alt="Static Badge" src="https://img.shields.io/badge/c++-8.1.0-red?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/python-3.12-blue?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/PyQt5-green?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/sklearn-1.4.2-black?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/numpy-1.26.4-pink?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/pandas-2.2.2-orange?style=flat">
+MlCOFSyn is a machine learning framework designed for the synthesis of two-dimensional covalent organic frameworks (2D COFs), aiming to enhance synthesis efficiency and lower technical barriers.MlCOFSyn simplifies the parameter input process through machine learning algorithms and an intuitive graphical interface, enabling it to run on consumer-grade computers. This makes it an accessible tool for non-expert users. By addressing the lack of theoretical tools in the field of 2D COF synthesis, the MlCOFSyn framework represents a significant advancement in facilitating related research and synthesis.The framework offers the following core functionalities:
 
+1. ​**Prediction**​: Predicts the crystal size based on the input monomer addition sequence.
+2. ​**Design**​: Derives the required monomer addition sequence by specifying the target crystal size.
+3. ​**Optimization**​: Optimizes the synthesis pathway to produce larger crystals.
 
 **A Machine Learning Framework to Facilitate the Synthesis of 2D Covalent Organic Frameworks**
 
