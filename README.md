@@ -45,6 +45,11 @@ After launching `main_ui_design.py`, entering the initialization parameters will
 
 Contributions, issues and feature requests are welcome!
 
+## Acknowledgments
+
+This work was supported by the National Natural Science Foundation of China (grant number: 22103053) and the Shanghai Technical Service Center of Science and Engineering Computing at Shanghai University.
+
+
 ## Reference
 
 [1] Tian, J.; Treaster, K. A.; Xiong, L.; Wang, Z.; Evans, A. M.; Li, H. Taming Two-Dimensional Polymerization by a Machine-Learning Discovered Crystallization Model. Angew. Chem. Int. Ed. 2024, 63 (39), e202408937. https://doi.org/10.1002/anie.202408937 github: https://github.com/Tia-tie-zhu/NEgen1.git
