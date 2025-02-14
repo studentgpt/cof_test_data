@@ -30,7 +30,7 @@ MlCOFSyn is a machine learning framework designed for the synthesis of two-dimen
 ### **3.Design Task**
 `python MlCOFSyn/design/multibax-sklearn-main/main_ui_design.py `
 After launching `main_ui_design.py`, entering the initialization parameters will redirect you to the Design page. Input the required optimization space and the corresponding termination conditions, then click ""Start Bayesian Design " to initiate the optimization process.	
-![bayesian1](https://github.com/studentgpt/test1/blob/main/image/design1.png)
+![bayesian1](https://github.com/studentgpt/test1/blob/main/image/design2.png)
 
 ## Author
 
