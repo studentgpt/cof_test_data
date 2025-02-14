@@ -14,8 +14,10 @@ MlCOFSyn is a machine learning framework designed for the synthesis of two-dimen
 ### **1.Prediction Task**
 `python MlCOFSyn/negen1o_ui/NEgen1_start.py`
 
-**After startup, the left panel is used for initializing parameters, while the right panel is for generating addition lists. Clicking on the list allows the generation of different types of addition lists.**
+**After startup, the left panel is used for initializing parameters, while the right panel is for generating addition lists. Click Modify cof_function.h Parameters to modify the internal parameters of different COFs,and Clicking on the list allows the generation of different types of addition lists.**
 ![image1](https://github.com/studentgpt/MlCOFSyn/blob/main/image/NEgen1o_1_1.png)
+<img src="https://github.com/studentgpt/MlCOFSyn/blob/main/image/function1.png" alt="image2" width="300" height="auto">
+
 **Enter the sequence in the "NEgen1oOutput" section to obtain the final output result.**
 ![image3](https://github.com/studentgpt/test1/blob/main/image/NEgen1o_3.png)
 **Finally, click "Output" in the "DataProcessing" section to view all corresponding result details and crystal distributions.**
