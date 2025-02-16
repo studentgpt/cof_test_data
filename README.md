@@ -9,7 +9,6 @@ MlCOFSyn is a machine learning framework designed for the synthesis of two-dimen
 2. ​**Design**​: Derives the required monomer addition sequence by specifying the target crystal size.
 3. ​**Optimization**​: Optimizes the synthesis pathway to produce larger crystals.
 
-If you use MlCOFSyn, please cite this: https://chemrxiv.org/XXX
 
 ## Instructions for running MlCOFSyn
 ### **1.Prediction Task**
@@ -64,6 +63,11 @@ Email: lihaoyuan@shu.edu.cn.
 ## Acknowledgments
 
 This work was supported by the National Natural Science Foundation of China (grant number: 22103053).
+
+## Citation
+
+Please cite our paper: "A Machine Learning Framework to Facilitate the Synthesis of 2D Covalent Organic Frameworks" if you find this project helpful:
+[`https://chemrxiv.org/XXX`](https://chemrxiv.org/XXX)
 
 
 ## References
