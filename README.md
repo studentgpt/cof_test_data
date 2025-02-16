@@ -1,6 +1,5 @@
 
 # MlCOFSyn
-**A Machine Learning Framework to Facilitate the Synthesis of 2D Covalent Organic Frameworks**
 
 <img alt="Static Badge" src="https://img.shields.io/badge/c++-8.1.0-red?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/python-3.12-blue?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/PyQt5-green?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/sklearn-1.4.2-black?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/numpy-1.26.4-pink?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/pandas-2.2.2-orange?style=flat">
 
@@ -12,7 +11,7 @@ MlCOFSyn is a machine learning framework designed for the synthesis of two-dimen
 
 If you use MlCOFSyn, please cite this: https://chemrxiv.org/XXX
 
-## Instructions
+## Instructions for running MlCOFSyn
 ### **1.Prediction Task**
 `python MlCOFSyn/negen1o_ui/NEgen1_start.py`
 
@@ -40,14 +39,14 @@ If you use MlCOFSyn, please cite this: https://chemrxiv.org/XXX
 
 ## A brief description of the theory
 
-The NEgen1 model<sup>[1]</sup> was derived from kinetic Monte Carlo simulation results. This model takes six parameters for the 2D COF and those for COF-5 are used as default as provided in the code.<sup>[2][3]</sup>Methods to derive the parameters for the other 2D COFs can be found in literature.<sup>[4][5]</sup> The NEgen1o model is optimized upon the NEgen1 model for efficiency while not affecting accuracy.<sup>[6]</sup>
+The NEgen1 model<sup>[1]</sup> was derived from kinetic Monte Carlo simulation results. This model takes six parameters for the 2D COF and those for COF-5 are used as default as provided in the code.<sup>[1][2]</sup>Methods to derive the parameters for the other 2D COFs can be found in literature.<sup>[3][4]</sup> The NEgen1o model is optimized upon the NEgen1 model for efficiency while not affecting accuracy.<sup>[5]</sup>
 
-The prediction task is performed by directly running the computational engine (the NEgen1o model). The optimization task leverages Bayesian algorithm.<sup>[7]</sup> The design task utilize the MeanBAX<sup>[8]</sup> as the acquisition function.
+The prediction task is performed by directly running the computational engine (the NEgen1o model). The optimization task leverages Bayesian algorithm.<sup>[6]</sup> The design task utilize the MeanBAX<sup>[7]</sup> as the acquisition function.
 
 A detailed technical description can be found at: https://chemrxiv.org/XXX
 
 
-## Author
+## Authors
 
 👤 **Yue Shi**
 
@@ -71,16 +70,14 @@ This work was supported by the National Natural Science Foundation of China (gra
 
 [1] Tian, J.; Treaster, K. A.; Xiong, L.; Wang, Z.; Evans, A. M.; Li, H. Taming Two-Dimensional Polymerization by a Machine-Learning Discovered Crystallization Model. Angew. Chem. Int. Ed. 2024, 63 (39), e202408937.
 
-[2] Dighe, A. V.; Bhawnani, R. R.; Podupu, P. K. R.; Dandu, N. K.; Ngo, A. T.; Chaudhuri, S.; Singh, M. R. Microkinetic Insights into the Role of Catalyst and Water Activity on the Nucleation, Growth, and Dissolution during COF-5 Synthesis. Nanoscale 2023, 15 (21), 9329–9338.
+[2] Li, H.; Evans, A. M.; Dichtel, W. R.; Bredas, J.-L. Quantitative Description of the Lateral Growth of Two-Dimensional Covalent Organic Frameworks Reveals Self-Templation Effects. ACS Mater. Lett. 2021, 3 (4), 398–405.
 
-[3] Li, H.; Evans, A. M.; Dichtel, W. R.; Bredas, J.-L. Quantitative Description of the Lateral Growth of Two-Dimensional Covalent Organic Frameworks Reveals Self-Templation Effects. ACS Mater. Lett. 2021, 3 (4), 398–405.
+[3] Li, H.; Chavez, A. D.; Li, H.; Li, H.; Dichtel, W. R.; Bredas, J.-L. Nucleation and Growth of Covalent Organic Frameworks from Solution: The Example of COF-5. J. Am. Chem. Soc. 2017, 139 (45), 16310–16318.
 
-[4] Li, H.; Chavez, A. D.; Li, H.; Li, H.; Dichtel, W. R.; Bredas, J.-L. Nucleation and Growth of Covalent Organic Frameworks from Solution: The Example of COF-5. J. Am. Chem. Soc. 2017, 139 (45), 16310–16318.
+[4]	Li, H.; Li, H.; Dai, Q.; Li, H.; Brédas, J.-L. Hydrolytic Stability of Boronate Ester-Linked Covalent Organic Frameworks. Adv. Theor. Simul. 2018, 1 (2), 1700015.
 
-[5]	Li, H.; Li, H.; Dai, Q.; Li, H.; Brédas, J.-L. Hydrolytic Stability of Boronate Ester-Linked Covalent Organic Frameworks. Adv. Theor. Simul. 2018, 1 (2), 1700015.
+[5] ChemRxiv----------
 
-[6] ChemRxiv----------
+[6] Shields, B. J.; Stevens, J.; Li, J.; Parasram, M.; Damani, F.; Alvarado, J. I. M.; Janey, J. M.; Adams, R. P.; Doyle, A. G. Bayesian Reaction Optimization as a Tool for Chemical Synthesis. Nature 2021, 590 (7844), 89–96.
 
-[7] Shields, B. J.; Stevens, J.; Li, J.; Parasram, M.; Damani, F.; Alvarado, J. I. M.; Janey, J. M.; Adams, R. P.; Doyle, A. G. Bayesian Reaction Optimization as a Tool for Chemical Synthesis. Nature 2021, 590 (7844), 89–96.
-
-[8] Chitturi, S. R.; Ramdas, A.; Wu, Y.; Rohr, B.; Ermon, S.; Dionne, J.; Jornada, F. H. da; Dunne, M.; Tassone, C.; Neiswanger, W.; Ratner, D. Targeted Materials Discovery Using Bayesian Algorithm Execution. npj Comput. Mater. 2024, 10 (1), 156.
+[7] Chitturi, S. R.; Ramdas, A.; Wu, Y.; Rohr, B.; Ermon, S.; Dionne, J.; Jornada, F. H. da; Dunne, M.; Tassone, C.; Neiswanger, W.; Ratner, D. Targeted Materials Discovery Using Bayesian Algorithm Execution. npj Comput. Mater. 2024, 10 (1), 156.
