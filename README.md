@@ -42,7 +42,7 @@ If you use MlCOFSyn, please cite this: https://chemrxiv.org/XXX
 
 The NEgen1 model<sup>[1]</sup> was derived from kinetic Monte Carlo simulation results. This model takes six parameters for the 2D COF and those for COF-5 are used as default as provided in the code.<sup>[2][3]</sup>Methods to derive the parameters for the other 2D COFs can be found in literature.<sup>[4][5]</sup> The NEgen1o model is optimized upon the NEgen1 model for efficiency while not affecting accuracy.<sup>[6]</sup>
 
-The prediction task is performed by directly running the computational engine (the NEgen1o model). The optimization task leverages Bayesian algorithm.<sup>[7]</sup> The design task utilize the MeanBAX<sup>[7]</sup> as the acquisition function.
+The prediction task is performed by directly running the computational engine (the NEgen1o model). The optimization task leverages Bayesian algorithm.<sup>[7]</sup> The design task utilize the MeanBAX<sup>[8]</sup> as the acquisition function.
 
 A detailed technical description can be found at: https://chemrxiv.org/XXX
 
@@ -81,4 +81,6 @@ This work was supported by the National Natural Science Foundation of China (gra
 
 [6] ChemRxiv----------
 
-[7] Chitturi, S. R.; Ramdas, A.; Wu, Y.; Rohr, B.; Ermon, S.; Dionne, J.; Jornada, F. H. da; Dunne, M.; Tassone, C.; Neiswanger, W.; Ratner, D. Targeted Materials Discovery Using Bayesian Algorithm Execution. npj Comput. Mater. 2024, 10 (1), 156.
+[7] Shields, B. J.; Stevens, J.; Li, J.; Parasram, M.; Damani, F.; Alvarado, J. I. M.; Janey, J. M.; Adams, R. P.; Doyle, A. G. Bayesian Reaction Optimization as a Tool for Chemical Synthesis. Nature 2021, 590 (7844), 89–96.
+
+[8] Chitturi, S. R.; Ramdas, A.; Wu, Y.; Rohr, B.; Ermon, S.; Dionne, J.; Jornada, F. H. da; Dunne, M.; Tassone, C.; Neiswanger, W.; Ratner, D. Targeted Materials Discovery Using Bayesian Algorithm Execution. npj Comput. Mater. 2024, 10 (1), 156.
