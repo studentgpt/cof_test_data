@@ -42,20 +42,18 @@ MlCOFSyn is a machine learning framework designed for the synthesis of two-dimen
 
 `python MlCOFSyn/bayesian/main_ui_optimization.py `
 
-**After launching `main_ui_optimization.py`, entering the initialization and COF parameters(Click "Load COF parameters" and "Start") will redirect you to the Optimization page. Input the required reaction space and termination conditions, then click "Start Bayesian Optimization" to initiate the optimization process.**
+**After launching `main_ui_optimization.py`, entering the initialization and COF parameters(Click "Load COF parameters" and "Start") will redirect you to the Optimization page. Input the required reaction space and termination conditions, then click "Start Bayesian Optimization" to initiate the optimization process.** 🚨 **Recommended to use 5 experiments per batch, and the number of CPU cores should be at least 6.** 🚨
+
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/bayesian_1.png)
 
 
 ### **3.Design Task**
 `python MlCOFSyn/design/multibax-sklearn-main/main_ui_design.py `
 
-**After launching `main_ui_design.py`, entering the initialization and COF parameters(Click "Load COF parameters" and "Start") will redirect you to the Design page. Input the required design space and the corresponding termination conditions, then click "Start Bayesian Design " to initiate the design process.**
+**After launching `main_ui_design.py`, entering the initialization and COF parameters(Click "Load COF parameters" and "Start") will redirect you to the Design page. Input the required design space and the corresponding termination conditions, then click "Start Bayesian Design " to initiate the design process.** 🚨 **Recommended to use 5 experiments per batch, and the number of CPU cores should be at least 6.** 🚨
+
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/design2.png)
 
-🚨 **attention**🚨 
-1. Task per core: Each task requires one CPU core to execute.
-
-2. Task submission limit: The total number of tasks submitted should be less than the total number of available CPU cores.
    
    **Please verify the number of tasks and cores before submission to avoid system overload.**
 
