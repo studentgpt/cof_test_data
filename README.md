@@ -67,6 +67,18 @@ The prediction task is performed by directly running the computational engine (t
 
 A detailed technical description can be found at: https://chemrxiv.org/XXX
 
+## License
+The Apache License 2.0 is a permissive license whose main conditions require the preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+
+| **Permissions**        | **Limitations**      | **Conditions**      |
+|------------------------|----------------------|---------------------|
+| Commercial use ✅       | Trademark use ❌      | License and copyright notice ⚠️ |
+| Modification 	✅         | Liability ❌          | State changes ⚠️     |
+| Distribution ✅         | Warranty ❌           |                     |
+| Patent use ✅           |                      |                     |
+| Private use ✅          |                      |                     |
+
+
 
 ## Authors
 
