@@ -2,6 +2,7 @@
 # MlCOFSyn
 
 <img alt="Static Badge" src="https://img.shields.io/badge/c++-8.1.0-red?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/python-3.12-blue?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/PyQt5-green?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/sklearn-1.4.2-black?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/numpy-1.26.4-pink?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/pandas-2.2.2-orange?style=flat">
+![Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
 MlCOFSyn is a machine learning framework designed for the synthesis of two-dimensional covalent organic frameworks (2D COFs). MlCOFSyn leverages machine learning algorithms and features an intuitive graphical interface, enabling it to be run on consumer-grade computers by non-experts. The MlCOFSyn framework currently integrates the NEgen1o model as the computational engine and has the following functionalities:
 
@@ -20,7 +21,10 @@ MlCOFSyn is a machine learning framework designed for the synthesis of two-dimen
 
 `C++>= 8.1.0`
 
+
 ## Instructions for running MlCOFSyn
+
+
 ### **1.Prediction Task**
 `python MlCOFSyn/negen1o_ui/NEgen1_start.py`
 
@@ -40,11 +44,19 @@ MlCOFSyn is a machine learning framework designed for the synthesis of two-dimen
 **After launching `main_ui_optimization.py`, entering the initialization and COF parameters(Click "Load COF parameters" and "Start") will redirect you to the Optimization page. Input the required reaction space and termination conditions, then click "Start Bayesian Optimization" to initiate the optimization process.**
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/bayesian_1.png)
 
+
 ### **3.Design Task**
 `python MlCOFSyn/design/multibax-sklearn-main/main_ui_design.py `
 
 **After launching `main_ui_design.py`, entering the initialization and COF parameters(Click "Load COF parameters" and "Start") will redirect you to the Design page. Input the required design space and the corresponding termination conditions, then click "Start Bayesian Design " to initiate the design process.**
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/design2.png)
+
+🚨 **attention**🚨 
+1. Task per core: Each task requires one CPU core to execute.
+
+2. Task submission limit: The total number of tasks submitted should be less than the total number of available CPU cores.
+   
+   Please verify the number of tasks and cores before submission to avoid system overload.
 
 ## A brief description of the theory
 
