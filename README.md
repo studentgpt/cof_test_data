@@ -2,7 +2,8 @@
 # MlCOFSyn
 
 <img alt="Static Badge" src="https://img.shields.io/badge/c++-8.1.0-red?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/python-3.12-blue?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/PyQt5-green?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/sklearn-1.4.2-black?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/numpy-1.26.4-pink?style=flat"> <img alt="Static Badge" src="https://img.shields.io/badge/pandas-2.2.2-orange?style=flat">
-![Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+![Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-brown.svg)
+![Windows Badge](https://img.shields.io/badge/Platform-Windows-blue)
 
 MlCOFSyn is a machine learning framework designed for the synthesis of two-dimensional covalent organic frameworks (2D COFs). MlCOFSyn leverages machine learning algorithms and features an intuitive graphical interface, enabling it to be run on consumer-grade computers by non-experts. The MlCOFSyn framework currently integrates the NEgen1o model as the computational engine and has the following functionalities:
 
