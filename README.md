@@ -101,7 +101,7 @@ This work was supported by the National Natural Science Foundation of China (gra
 
 ## Citation
 
-Please cite our paper: "A Machine Learning Framework to Facilitate the Synthesis of 2D Covalent Organic Frameworks" if you find this project helpful:
+Please cite our paper: "MlCOFSyn: A Machine Learning Framework to Facilitate the Synthesis of 2D Covalent Organic Frameworks" if you find this project helpful:
 [`https://chemrxiv.org/XXX`](https://chemrxiv.org/XXX)
 
 
