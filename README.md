@@ -9,6 +9,16 @@ MlCOFSyn is a machine learning framework designed for the synthesis of two-dimen
 2. ​**Design**​: Derives the required monomer addition sequence by specifying the target crystal size.
 3. ​**Optimization**​: Optimizes the synthesis pathway to produce larger crystals.
 
+## Installation
+1.You can clone the repository by running the following commands:
+
+`git clone https://github.com/studentgpt/MlCOFSyn.git`
+
+2.install environment requirements
+
+`pip install -r requirements.txt`
+
+`C++>= 8.1.0`
 
 ## Instructions for running MlCOFSyn
 ### **1.Prediction Task**
