@@ -57,7 +57,7 @@ MlCOFSyn is a machine learning framework designed for the synthesis of two-dimen
 
 2. Task submission limit: The total number of tasks submitted should be less than the total number of available CPU cores.
    
-   Please verify the number of tasks and cores before submission to avoid system overload.
+   **Please verify the number of tasks and cores before submission to avoid system overload.**
 
 ## A brief description of the theory
 
