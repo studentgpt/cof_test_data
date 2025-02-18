@@ -60,7 +60,7 @@ In this section, you will need to input the **monomer addition sequence** to gen
 ![image3](https://github.com/studentgpt/test1/blob/main/image/NEgen1o_3.png)
 
 **1.3 Finally, click `Output` in the "DataProcessing" section to view all the corresponding results, including detailed data and crystal distribution.**
-![image4](https://github.com/studentgpt/test1/blob/3733c2ca3381163b403e7604c96d81fef48f1719/image/Negen1o_4.png?raw=true)
+![image4](https://github.com/studentgpt/MlCOFSyn/blob/main/image/Negen1o_4.png)
 
 ### **2.Optimization Task**
 
