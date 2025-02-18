@@ -45,7 +45,7 @@ python NEgen1_start.py
 
 - The **right panel** is for **generating addition lists**. Here, you can create sequences for adding monomers or other materials during the reaction process.
 
-To modify the **internal parameters** of different COFs (which are obtained through experimental measurements and reaction pathway analysis), click on the **`Load COF parameters`** button. This allows you to adjust various COF-related settings based on the data you have.
+To modify the **internal parameters** of different COFs (which are obtained through experimental measurements and reaction pathway analysis), click on the **`Set COF parameters`** button. This allows you to adjust various COF-related settings based on the data you have.
 
 Additionally, by clicking on the options in the list, you can generate different types of **monomer addition lists**, which can be used to guide the experimental procedure based on the sequence type (e.g., constant sequence, geometric progression, etc.).
 
