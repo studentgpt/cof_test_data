@@ -124,7 +124,7 @@ You can find data examples in the file: `MlCOFSyn/design/multibax-sklearn-main/d
 ![bayesian1](https://github.com/studentgpt/MlCOFSyn/blob/main/image/design2.png)
 
    
-   **Please verify the number of tasks and cores before submission to avoid system overload.**
+🚨**Please verify the number of tasks and cores before submission to avoid system overload.**
 
 ## A brief description of the theory
 
