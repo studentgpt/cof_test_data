@@ -14,11 +14,15 @@ MlCOFSyn is a machine learning framework designed for the synthesis of two-dimen
 ## Installation
 1.You can clone the repository by running the following commands:
 
-`git clone https://github.com/studentgpt/MlCOFSyn.git`
+```bash
+git clone https://github.com/studentgpt/MlCOFSyn.git
+```
 
 2.install environment requirements
 
-`pip install -r requirements.txt`
+```bash
+pip install -r requirements.txt
+```
 
 `C++>= 8.1.0`
 
@@ -27,30 +31,63 @@ MlCOFSyn is a machine learning framework designed for the synthesis of two-dimen
 
 
 ### **1.Prediction Task**
-`python MlCOFSyn/negen1o_ui/NEgen1_start.py`
+**1.1 Run the following command to launch the the NEgen1o Graphical User Interface(GUI):** 
+```bash
+python NEgen1_start.py
+```
 
-**After startup, the left panel is used for initializing parameters, while the right panel is for generating addition lists. Click "Load COF parameters" to modify the internal parameters of different COFs(obtained through experimental measurements and reaction pathway analysis), and Clicking on the list allows the generation of different types of addition lists.**
+
+**After starting up the GUI:**
+
+- The **left panel** (Initial System and Preparation Condition) is used to **initialize parameters**. This section allows you to set the initial conditions for the system, such as volume, concentration, and other system-related settings.
+
+- The **right panel** is for **generating addition lists**. Here, you can create sequences for adding monomers or other materials during the reaction process.
+
+To modify the **internal parameters** of different COFs (which are obtained through experimental measurements and reaction pathway analysis), click on the **`Load COF parameters`** button. This allows you to adjust various COF-related settings based on the data you have.
+
+Additionally, by clicking on the options in the list, you can generate different types of **monomer addition lists**, which can be used to guide the experimental procedure based on the sequence type (e.g., constant sequence, geometric progression, etc.).
+
 ![image1](https://github.com/studentgpt/MlCOFSyn/blob/main/image/NEgen1o_1_1.png)
 <img src="https://github.com/studentgpt/MlCOFSyn/blob/main/image/function1.png" alt="image2" width="300" height="auto">
 
-**Enter the sequence in the "NEgen1oOutput" section to obtain the final output result.**
+**1.2 Enter the monomer addition sequence in the "NEgen1oOutput" section to obtain the final output result.**
+
+In this section, you will need to input the **monomer addition sequence** to generate the results. The sequence can be entered in the following format:
+
+* `0.019,0.037,0.055,0.073,0.091,0.109,0.127,0.145,0.163,0.181` represents increasing-rate addition
+
+* `1`represents a single addition
 ![image3](https://github.com/studentgpt/test1/blob/main/image/NEgen1o_3.png)
-**Finally, click "Output" in the "DataProcessing" section to view all corresponding result details and crystal distributions.**
+
+**1.3 Finally, click `Output` in the "DataProcessing" section to view all the corresponding results, including detailed data and crystal distribution.**
 ![image4](https://github.com/studentgpt/test1/blob/3733c2ca3381163b403e7604c96d81fef48f1719/image/Negen1o_4.png?raw=true)
 
 ### **2.Optimization Task**
 
-`python MlCOFSyn/bayesian/main_ui_optimization.py `
+**2.1 Run the following command to launch the Bayesian optimization interface:**
+   ```bash
+   python main_ui_optimization.py
+   ```
 
-**After launching `main_ui_optimization.py`, entering the initialization and COF parameters(Click "Load COF parameters" and "Start") will redirect you to the Optimization page. Input the required reaction space and termination conditions, then click "Start Bayesian Optimization" to initiate the optimization process.** 🚨 **Recommended to use 5 experiments per batch, and the number of CPU cores should be at least 6.** 🚨
+**2.2** After launching the program, enter the **initial parameters** and click **`Set COF parameters`** to set up the COF parameters.
+
+**2.3** Then, click **`Start`** to enter the **Bayesian Optimization GUI**. Input the required **reaction space** CSV file path, **Total Iteration**, **termination conditions**, and **candidates per iteration**, and click **"Start Bayesian Optimization"** to begin the process.
+ 
+🚨 **Recommended to use 5 experiments per batch, and the number of CPU cores should be at least 6.** 🚨
 
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/bayesian_1.png)
 
 
 ### **3.Design Task**
-`python MlCOFSyn/design/multibax-sklearn-main/main_ui_design.py `
+**3.1 Run the following command to launch the Bayesian Design GUI:**
+```bash
+python main_ui_design.py
+   ```
+**3.2** After launching the program, enter the **initial parameters** and click **`Set COF parameters`** to set up the COF parameters.
 
-**After launching `main_ui_design.py`, entering the initialization and COF parameters(Click "Load COF parameters" and "Start") will redirect you to the Design page. Input the required design space and the corresponding termination conditions, then click "Start Bayesian Design " to initiate the design process.** 🚨 **Recommended to use 5 experiments per batch, and the number of CPU cores should be at least 6.** 🚨
+**3.3** Then, click **`Start`** to enter the **Bayesian Design GUI**. Input the required **reaction space** CSV file path, **Total Iteration**, **termination conditions**, and **candidates per iteration**, and click **"Start Bayesian Design"** to begin the process.
+ 
+🚨 **Recommended to use 5 experiments per batch, and the number of CPU cores should be at least 6.** 🚨
 
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/design2.png)
 
