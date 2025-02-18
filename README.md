@@ -13,7 +13,6 @@ MlCOFSyn is a machine learning framework designed for the synthesis of two-dimen
 
 ## Installation
 1.You can clone the repository by running the following commands:
-
 ```bash
 git clone https://github.com/studentgpt/MlCOFSyn.git
 ```
@@ -32,6 +31,9 @@ pip install -r requirements.txt
 
 ### **1.Prediction Task**
 **1.1 Run the following command to launch the the NEgen1o Graphical User Interface(GUI):** 
+```bash
+cd MlCOFSyn\negen1o_ui
+```
 ```bash
 python NEgen1_start.py
 ```
@@ -56,7 +58,7 @@ In this section, you will need to input the **monomer addition sequence** to gen
 
 * `0.019,0.037,0.055,0.073,0.091,0.109,0.127,0.145,0.163,0.181` represents increasing-rate addition
 
-* `1`represents a single addition
+* `1` represents a single addition
 ![image3](https://github.com/studentgpt/test1/blob/main/image/NEgen1o_3.png)
 
 **1.3 Finally, click `Output` in the "DataProcessing" section to view all the corresponding results, including detailed data and crystal distribution.**
@@ -66,6 +68,9 @@ In this section, you will need to input the **monomer addition sequence** to gen
 
 **2.1 Run the following command to launch the Bayesian optimization interface:**
    ```bash
+   cd MlCOFSyn\bayesian
+   ```
+   ```bash
    python main_ui_optimization.py
    ```
 
@@ -74,12 +79,34 @@ In this section, you will need to input the **monomer addition sequence** to gen
 **2.3** Then, click **`Start`** to enter the **Bayesian Optimization GUI**. Input the required **reaction space** CSV file path, **Total Iteration**, **termination conditions**, and **candidates per iteration**, and click **"Start Bayesian Optimization"** to begin the process.
  
 🚨 **Recommended to use 5 experiments per batch, and the number of CPU cores should be at least 6.** 🚨
+#### **2.4 Reaction Space Format**
+
+The reaction space must be in CSV format with the following structure:
+```bash
+   r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20
+
+   0.062,0.109,0.082,0.025,0.165,0.147,0.131,0.146,0.102,0.031,0,0,0,0,0,0,0,0,0,0
+
+   0.031,0.036,0.07,0.054,0.021,0.086,0.027,0.012,0.092,0.013,0.089,0.075,0.028,0.028,0.088,0.071,0.076,0.019,0.022,0.062
+   ```
+
+- The first row contains feature names.
+- The following rows represent monomer addition sequences. 
+
+To ensure the proper functioning of the surrogate model, **please make sure that all monomer addition sequences in the `reaction_space.csv` have the same number of features** (use `0` to fill any empty spaces).
+
+You can find data examples in the file: `MlCOFSyn\bayesian\space\all_space.csv`
+
+
 
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/bayesian_1.png)
 
 
 ### **3.Design Task**
 **3.1 Run the following command to launch the Bayesian Design GUI:**
+```bash
+cd MlCOFSyn\design\multibax-sklearn-main
+   ```
 ```bash
 python main_ui_design.py
    ```
@@ -88,6 +115,11 @@ python main_ui_design.py
 **3.3** Then, click **`Start`** to enter the **Bayesian Design GUI**. Input the required **reaction space** CSV file path, **Total Iteration**, **termination conditions**, and **candidates per iteration**, and click **"Start Bayesian Design"** to begin the process.
  
 🚨 **Recommended to use 5 experiments per batch, and the number of CPU cores should be at least 6.** 🚨
+
+#### **3.4 Reaction Space Format**
+The reaction space format for the **Bayesian Design** task is **identical** to the one used in the **Bayesian Optimization** task.
+
+You can find data examples in the file: `MlCOFSyn/design/multibax-sklearn-main/dataset/all_space.csv`
 
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/design2.png)
 
