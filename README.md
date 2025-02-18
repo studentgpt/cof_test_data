@@ -59,7 +59,10 @@ In this section, you will need to input the **monomer addition sequence** to gen
 * `0.019,0.037,0.055,0.073,0.091,0.109,0.127,0.145,0.163,0.181` represents increasing-rate addition
 
 * `1` represents a single addition
+
 ![image3](https://github.com/studentgpt/test1/blob/main/image/NEgen1o_3.png)
+
+🚨 **Before performing the next addition sequence calculation with the same number of additions, please ensure that all addition sequence files with the same number of additions (e.g., `nuc__1_0_x`, where `x`is identical) in the `MlCOFSyn\negen1o` directory are first backed up to another folder or deleted. Otherwise, the program will not run when you click `Start`**
 
 **1.3 Finally, click `Output` in the "DataProcessing" section to view all the corresponding results, including detailed data and crystal distribution.**
 ![image4](https://github.com/studentgpt/MlCOFSyn/blob/main/image/Negen1o_4.png)
