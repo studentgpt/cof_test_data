@@ -41,13 +41,13 @@ python NEgen1_start.py
 
 **After starting up the GUI:**
 
-- The **left panel** (Initial System and Preparation Condition) is used to **initialize parameters**. This section allows you to set the initial conditions for the system, such as volume, concentration, and other system-related settings.
+- The **left panel** is used to **Set parameters**. This section allows you to set the initial conditions of the system, such as volume, initial nuclei concentration,  diameter and height.
 
-- The **right panel** is for **generating addition lists**. Here, you can create sequences for adding monomers or other materials during the reaction process.
+- The **right panel** is for **Set monomer addition sequence**. Here, you can create sequences for adding monomers.
 
-To modify the **internal parameters** of different COFs (which are obtained through experimental measurements and reaction pathway analysis), click on the **`Set COF parameters`** button. This allows you to adjust various COF-related settings based on the data you have.
+To modify  **the material parameters of the 2D COF** (which can be obtained through experimental measurements and reaction pathway analysi[3][4]), click on the **`Set COF parameters`** button.
 
-Additionally, by clicking on the options in the list, you can generate different types of **monomer addition lists**, which can be used to guide the experimental procedure based on the sequence type (e.g., constant sequence, geometric progression, etc.).
+In the `NEgen1o engine` panel, you can input  **monomer addition sequence**, which is a list of the monomer volume added at each time(in L). 
 
 ![image1](https://github.com/studentgpt/MlCOFSyn/blob/main/image/NEgen1o_1_1.png)
 <img src="https://github.com/studentgpt/MlCOFSyn/blob/main/image/function1.png" alt="image2" width="300" height="auto">
