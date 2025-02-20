@@ -25,6 +25,22 @@ pip install -r requirements.txt
 
 `C++>= 8.1.0`
 
+## Requirement for running MlCOFSyn
+### Python Libraries
+The following Python libraries must be installed:
+- numpy
+- pandas
+- scipy
+- scikit-learn
+- matplotlib
+- tqdm
+- joblib
+- psutil
+
+### System Requirements
+- **Operating System**: Windows  
+- **CPU**: A minimum of 6 CPU cores is required.
+- **C++ Version**: `C++ >= 8.1.0` must be installed.
 
 ## Instructions for running MlCOFSyn
 
@@ -90,13 +106,16 @@ In this section, you can initiate the calculation by clicking the `Run` button t
      0.062,0.109,0.082,0.025,0.165,0.147,0.131,0.146,0.102,0.031,0,0,0,0,0,0,0,0,0,0
   
      0.031,0.036,0.07,0.054,0.021,0.086,0.027,0.012,0.092,0.013,0.089,0.075,0.028,0.028,0.088,0.071,0.076,0.019,0.022,0.062
+
    ```
   - The first row contains feature names.
-  - The following rows represent monomer addition sequences. 
+  - The following rows represent monomer addition sequences.
+  - You can find data examples in the file: `MlCOFSyn\optimization\space\all_space.csv`
+  - To ensure the proper functioning of the surrogate model, **please make sure that all monomer addition sequences in the `reaction_space.csv` have the same number of features** (use `0` to fill any empty spaces).
   
   2. **Stop Conditions**:  
      - Input the **Maximum Number of Iterations**.  
-     - Specify the **No-Improvement Criterion** as a stopping condition.  
+     - Specify the **No-Improvement Criterion** as a stop condition.  
   
   3. **Start the Optimization**:  
      Once the **monomer addition sequence space file** and **stop conditions** are confirmed, click the **`Start Bayesian Optimization`** button to initiate the process.
@@ -104,23 +123,6 @@ In this section, you can initiate the calculation by clicking the `Run` button t
 The **Maximum Q value** and its corresponding **monomer addition sequence** will be displayed on the interface, and all other results will be saved to `optimization/result.csv`.
  
 🚨 **Recommended to use 5 experiments per batch, and the number of CPU cores should be at least 6.** 🚨
-#### **2.4 Reaction Space Format**
-
-The reaction space must be in CSV format with the following structure:
-```bash
-   r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20
-
-   0.062,0.109,0.082,0.025,0.165,0.147,0.131,0.146,0.102,0.031,0,0,0,0,0,0,0,0,0,0
-
-   0.031,0.036,0.07,0.054,0.021,0.086,0.027,0.012,0.092,0.013,0.089,0.075,0.028,0.028,0.088,0.071,0.076,0.019,0.022,0.062
-   ```
-
-  - The first row contains feature names.
-  - The following rows represent monomer addition sequences. 
-
-To ensure the proper functioning of the surrogate model, **please make sure that all monomer addition sequences in the `reaction_space.csv` have the same number of features** (use `0` to fill any empty spaces).
-
-You can find data examples in the file: `MlCOFSyn\bayesian\space\all_space.csv`
 
 
 
@@ -135,16 +137,24 @@ cd MlCOFSyn\design\multibax-sklearn-main
 ```bash
 python main_ui_design.py
    ```
-**3.2** After launching the program, enter the **initial parameters** and click **`Set COF parameters`** to set up the COF parameters.
+**3.2** After launching the program, you will enter the **Bayesian Design GUI**. To proceed, first click **`Set COF parameters`** to configure the COF parameters, and then input the **Monomer Concentration**.
 
-**3.3** Then, click **`Start`** to enter the **Bayesian Design GUI**. Input the required **reaction space** CSV file path, **Total Iteration**, **termination conditions**, and **candidates per iteration**, and click **"Start Bayesian Design"** to begin the process.
- 
-🚨 **Recommended to use 5 experiments per batch, and the number of CPU cores should be at least 6.** 🚨
+**3.3** After entering the initial parameters, follow these steps to begin the Bayesian Design process:
+1. **Load Monomer Addition Sequence Space File**:
+   The reaction space format for the **Bayesian Design** task is **identical** to the one used in the **Bayesian Optimization** task.
 
-#### **3.4 Reaction Space Format**
-The reaction space format for the **Bayesian Design** task is **identical** to the one used in the **Bayesian Optimization** task.
+   You can find data examples in the file: `MlCOFSyn/design/multibax-sklearn-main/dataset/all_space.csv`
 
-You can find data examples in the file: `MlCOFSyn/design/multibax-sklearn-main/dataset/all_space.csv`
+2.  **Stop Conditions**:  
+     - Input the **Maximum Number of Iterations**.  
+     - Specify the **Number of Design Sequences** as a stop condition.
+       
+3. **Target Q range**：
+   Please input the target range for the Q you aim to design.
+   
+4.**Start the Design**:
+   Once the **monomer addition sequence space file**, **stop conditions**, and **target Q range** are confirmed, click the **`Start Bayesian Design`** button to initiate the process.
+
 
 ![bayesian1](https://github.com/studentgpt/MlCOFSyn/blob/main/image/design2.png)
 
@@ -157,7 +167,7 @@ The NEgen1 model<sup>[1]</sup> was derived from kinetic Monte Carlo simulation r
 
 The prediction task is performed by directly running the computational engine (the NEgen1o model). The optimization task leverages Bayesian algorithm.<sup>[6]</sup> The design task utilize the MeanBAX<sup>[7]</sup> as the acquisition function.
 
-A detailed technical description can be found at: https://chemrxiv.org/XXX
+A detailed technical description can be found at: https://chemrxiv.org/XXX and https://doi.org/10.1002/anie.202408937
 
 ## License
 The Apache License 2.0 is a permissive license whose main conditions require the preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
@@ -193,8 +203,13 @@ This work was supported by the National Natural Science Foundation of China (gra
 
 ## Citation
 
-Please cite our paper: "MlCOFSyn: A Machine Learning Framework to Facilitate the Synthesis of 2D Covalent Organic Frameworks" if you find this project helpful:
-[`https://chemrxiv.org/XXX`](https://chemrxiv.org/XXX)
+If you find this project helpful, please cite our papers:
+
+1. **MlCOFSyn: A Machine Learning Framework to Facilitate the Synthesis of 2D Covalent Organic Frameworks**  
+   DOI: [`https://chemrxiv.org/XXX`](https://chemrxiv.org/XXX)
+
+2. **Taming Two-Dimensional Polymerization by a Machine-Learning Discovered Crystallization Model**  
+   DOI: [`https://doi.org/10.1002/anie.202408937`](https://doi.org/10.1002/anie.202408937)
 
 
 ## References
