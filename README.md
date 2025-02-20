@@ -63,7 +63,7 @@ python NEgen1_start.py
 
 - The **Conditions to Add Monomer**: In this section, you are required to input the **Monomer (core) Concentration** first, followed by the **Monomer Addition Sequence**, which is a list of the monomer volume added at each time (in L). Once the **Monomer Addition Sequence** is entered, you may click the `Check Input` button to display the corresponding **Number of Additions** and the **Total Added Volume**.
 
-The monomer addition sequence can be entered in the following format:
+The **monomer addition sequence** can be entered in the following format:
 
 * `0.019,0.037,0.055,0.073,0.091,0.109,0.127,0.145,0.163,0.181` represents increasing-rate addition
 
