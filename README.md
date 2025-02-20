@@ -78,7 +78,7 @@ In this section, you can initiate the calculation by clicking the `Run` button t
 
 ![image3](https://github.com/studentgpt/test1/blob/main/image/NEgen1o_3.png)
 
-🚨 **Before performing the next addition sequence calculation with the same number of additions, please ensure that all addition sequence files with the same number of additions (e.g., `nuc__1_0_x`, where `x`is identical) in the `MlCOFSyn\negen1o` directory are first backed up to another folder or deleted. Otherwise, the program will not run when you click `Start`**
+🚨 **Before Running the next monomer addition sequence calculation with the same number of additions, please ensure that all addition sequence files with the same number of additions (e.g., `nuc__1_0_x`, where `x`is identical) in the `MlCOFSyn\negen1o` directory are first backed up to another folder or deleted. Otherwise, the program will not run when you click `Run`**
 
 **1.3 Finally, click `Get Result Summary` in the "Post Processing" section to view all the corresponding results, including detailed data and crystal distribution.**
 ![image4](https://github.com/studentgpt/MlCOFSyn/blob/main/image/Negen1o_4.png)
