@@ -9,7 +9,7 @@ MlCOFSyn is a machine learning framework designed for the synthesis of two-dimen
 
 1. ​**Prediction**​: Predicts the crystal size based on the input monomer addition sequence.
 2. ​**Design**​: Derives the required monomer addition sequence by specifying the target crystal size.
-3. ​**Optimization**​: Optimizes the synthesis pathway to produce larger crystals.
+3. ​**Optimization**​: Optimizes the monomer addition sequence to produce larger crystals.
 
 ## Installation
 1.You can clone the repository by running the following commands:
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ### **1.Prediction Task**
 **1.1 Run the following command to launch the the NEgen1o Graphical User Interface(GUI):** 
 ```bash
-cd MlCOFSyn\negen1o_ui
+cd MlCOFSyn\prediction
 ```
 ```bash
 python NEgen1_start.py
@@ -41,11 +41,12 @@ python NEgen1_start.py
 
 **After starting up the GUI:**
 
-- The **left panel** is used to **Set parameters**. This section allows you to set the initial conditions of the system, such as volume, initial nuclei concentration,  diameter and height.
+- **`Set COF Parameters`** Button: Click this button to adjust the material parameters of the 2D COF, which can be determined through experimental measurements and reaction pathway analysis.
 
-- The **right panel** is for **Set monomer addition sequence**. Here, you can create sequences for adding monomers.
+- The **Initial System**: This section enables you to define the initial conditions of the system, such as the initial volume, nuclei concentration, diameter, and height.
 
-To modify  **the material parameters of the 2D COF** (which can be obtained through experimental measurements and reaction pathway analysi[3][4]), click on the **`Set COF parameters`** button.
+- The **Conditions to Add Monomer**: In this section, you are required to input the Monomer (core) Concentration first, followed by the **Monomer Addition Sequence**. Once the **Monomer Addition Sequence** is entered, you may click the `Check Input` button to display the corresponding Number of Additions and the Total Added Volume, calculated based on the sequence you have provided.
+  
 
 In the `NEgen1o engine` panel, you can input  **monomer addition sequence**, which is a list of the monomer volume added at each time(in L). 
 
