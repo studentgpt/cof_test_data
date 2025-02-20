@@ -23,7 +23,6 @@ git clone https://github.com/studentgpt/MlCOFSyn.git
 pip install -r requirements.txt
 ```
 
-`C++>= 8.1.0`
 
 ## Requirement for running MlCOFSyn
 ### Python Libraries
