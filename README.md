@@ -45,42 +45,63 @@ python NEgen1_start.py
 
 - The **Initial System**: This section enables you to define the initial conditions of the system, such as the initial volume, nuclei concentration, diameter, and height.
 
-- The **Conditions to Add Monomer**: In this section, you are required to input the Monomer (core) Concentration first, followed by the **Monomer Addition Sequence**. Once the **Monomer Addition Sequence** is entered, you may click the `Check Input` button to display the corresponding Number of Additions and the Total Added Volume, calculated based on the sequence you have provided.
-  
+- The **Conditions to Add Monomer**: In this section, you are required to input the **Monomer (core) Concentration** first, followed by the **Monomer Addition Sequence**, which is a list of the monomer volume added at each time (in L). Once the **Monomer Addition Sequence** is entered, you may click the `Check Input` button to display the corresponding **Number of Additions** and the **Total Added Volume**.
 
-In the `NEgen1o engine` panel, you can input  **monomer addition sequence**, which is a list of the monomer volume added at each time(in L). 
-
-![image1](https://github.com/studentgpt/MlCOFSyn/blob/main/image/NEgen1o_1_1.png)
-<img src="https://github.com/studentgpt/MlCOFSyn/blob/main/image/function1.png" alt="image2" width="300" height="auto">
-
-**1.2 Enter the monomer addition sequence in the "NEgen1oOutput" section to obtain the final output result.**
-
-In this section, you will need to input the **monomer addition sequence** to generate the results. The sequence can be entered in the following format:
+The monomer addition sequence can be entered in the following format:
 
 * `0.019,0.037,0.055,0.073,0.091,0.109,0.127,0.145,0.163,0.181` represents increasing-rate addition
 
 * `1` represents a single addition
 
+![image1](https://github.com/studentgpt/MlCOFSyn/blob/main/image/NEgen1o_1_1.png)
+<img src="https://github.com/studentgpt/MlCOFSyn/blob/main/image/function1.png" alt="image2" width="300" height="auto">
+
+**1.2  `Run Computational Engine` section:**
+
+In this section, you can initiate the calculation by clicking the `Run` button to execute the NEgen1o model. Once the model starts running, you can view detailed computational information directly from the panel in real-time.
+
 ![image3](https://github.com/studentgpt/test1/blob/main/image/NEgen1o_3.png)
 
 🚨 **Before performing the next addition sequence calculation with the same number of additions, please ensure that all addition sequence files with the same number of additions (e.g., `nuc__1_0_x`, where `x`is identical) in the `MlCOFSyn\negen1o` directory are first backed up to another folder or deleted. Otherwise, the program will not run when you click `Start`**
 
-**1.3 Finally, click `Output` in the "DataProcessing" section to view all the corresponding results, including detailed data and crystal distribution.**
+**1.3 Finally, click `Get Result Summary` in the "Post Processing" section to view all the corresponding results, including detailed data and crystal distribution.**
 ![image4](https://github.com/studentgpt/MlCOFSyn/blob/main/image/Negen1o_4.png)
 
 ### **2.Optimization Task**
 
 **2.1 Run the following command to launch the Bayesian optimization interface:**
    ```bash
-   cd MlCOFSyn\bayesian
+   cd MlCOFSyn\optimization
    ```
    ```bash
    python main_ui_optimization.py
    ```
 
-**2.2** After launching the program, enter the **initial parameters** and click **`Set COF parameters`** to set up the COF parameters.
+**2.2** After launching the program, you will enter the **Bayesian Optimization GUI**. To proceed, first click **`Set COF parameters`** to configure the COF parameters, and then input the **Monomer Concentration**.
 
-**2.3** Then, click **`Start`** to enter the **Bayesian Optimization GUI**. Input the required **reaction space** CSV file path, **Total Iteration**, **termination conditions**, and **candidates per iteration**, and click **"Start Bayesian Optimization"** to begin the process.
+**2.3** After entering the initial parameters, follow these steps to begin the Bayesian optimization process:
+
+  1. **Load Monomer Addition Sequence Space File**:  
+     Upload the file containing the monomer addition sequence space to be optimized.
+     The reaction space must be in CSV format with the following structure:
+  ```bash
+     r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20
+  
+     0.062,0.109,0.082,0.025,0.165,0.147,0.131,0.146,0.102,0.031,0,0,0,0,0,0,0,0,0,0
+  
+     0.031,0.036,0.07,0.054,0.021,0.086,0.027,0.012,0.092,0.013,0.089,0.075,0.028,0.028,0.088,0.071,0.076,0.019,0.022,0.062
+   ```
+  - The first row contains feature names.
+  - The following rows represent monomer addition sequences. 
+  
+  2. **Stop Conditions**:  
+     - Input the **Maximum Number of Iterations**.  
+     - Specify the **No-Improvement Criterion** as a stopping condition.  
+  
+  3. **Start the Optimization**:  
+     Once the **monomer addition sequence space file** and **stop conditions** are confirmed, click the **`Start Bayesian Optimization`** button to initiate the process.
+
+The **Maximum Q value** and its corresponding **monomer addition sequence** will be displayed on the interface, and all other results will be saved to `optimization/result.csv`.
  
 🚨 **Recommended to use 5 experiments per batch, and the number of CPU cores should be at least 6.** 🚨
 #### **2.4 Reaction Space Format**
@@ -94,8 +115,8 @@ The reaction space must be in CSV format with the following structure:
    0.031,0.036,0.07,0.054,0.021,0.086,0.027,0.012,0.092,0.013,0.089,0.075,0.028,0.028,0.088,0.071,0.076,0.019,0.022,0.062
    ```
 
-- The first row contains feature names.
-- The following rows represent monomer addition sequences. 
+  - The first row contains feature names.
+  - The following rows represent monomer addition sequences. 
 
 To ensure the proper functioning of the surrogate model, **please make sure that all monomer addition sequences in the `reaction_space.csv` have the same number of features** (use `0` to fill any empty spaces).
 
