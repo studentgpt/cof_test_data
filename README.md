@@ -93,7 +93,7 @@ In this section, you can initiate the calculation by clicking the `Run` button t
    python main_ui_optimization.py
    ```
 
-**2.2** After launching the program, you will enter the **Bayesian Optimization GUI**. To proceed, first click **`Set COF parameters`** to configure the COF parameters, and then input the **Monomer Concentration**.
+**2.2** After launching the program, you will enter the **Bayesian Optimization GUI**. To proceed, first click **`Set COF parameters`** to Set the COF parameters, and then input the **Monomer Concentration**.
 
 **2.3** After entering the initial parameters, follow these steps to begin the Bayesian optimization process:
 
@@ -114,16 +114,14 @@ In this section, you can initiate the calculation by clicking the `Run` button t
   - To ensure the proper functioning of the surrogate model, **please make sure that all monomer addition sequences in the `reaction_space.csv` have the same number of features** (use `0` to fill any empty spaces).
   
   2. **Stop Conditions**:  
-     - Input the **Maximum Number of Iterations**.  
-     - Specify the **No-Improvement Criterion** as a stop condition.  
+  - Input the **Maximum Number of Iterations**.  
+  - Specify the **No-Improvement Criterion** as a stop condition.  
   
   3. **Start the Optimization**:  
-     Once the **monomer addition sequence space file** and **stop conditions** are confirmed, click the **`Start Bayesian Optimization`** button to initiate the process.
+     Once the **monomer addition sequence space file** and **stop conditions** are confirmed, click the **`Start Bayesian Optimization`** button to run the process.
 
 The **Maximum Q value** and its corresponding **monomer addition sequence** will be displayed on the interface, and all other results will be saved to `optimization/result.csv`.
  
-🚨 **Recommended to use 5 experiments per batch, and the number of CPU cores should be at least 6.** 🚨
-
 
 
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/bayesian_1.png)
@@ -137,7 +135,7 @@ cd MlCOFSyn\design\multibax-sklearn-main
 ```bash
 python main_ui_design.py
    ```
-**3.2** After launching the program, you will enter the **Bayesian Design GUI**. To proceed, first click **`Set COF parameters`** to configure the COF parameters, and then input the **Monomer Concentration**.
+**3.2** After launching the program, you will enter the **Bayesian Design GUI**. To proceed, first click **`Set COF parameters`** to set the COF parameters, and then input the **Monomer Concentration**.
 
 **3.3** After entering the initial parameters, follow these steps to begin the Bayesian Design process:
 1. **Load Monomer Addition Sequence Space File**:
@@ -146,14 +144,14 @@ python main_ui_design.py
    You can find data examples in the file: `MlCOFSyn/design/multibax-sklearn-main/dataset/all_space.csv`
 
 2.  **Stop Conditions**:  
-     - Input the **Maximum Number of Iterations**.  
-     - Specify the **Number of Design Sequences** as a stop condition.
+  - Input the **Maximum Number of Iterations**.  
+  - Specify the **Number of Design Sequences** as a stop condition.
        
 3. **Target Q range**：
    Please input the target range for the Q you aim to design.
    
 4.**Start the Design**:
-   Once the **monomer addition sequence space file**, **stop conditions**, and **target Q range** are confirmed, click the **`Start Bayesian Design`** button to initiate the process.
+   Once the **monomer addition sequence space file**, **stop conditions**, and **target Q range** are confirmed, click the **`Start Bayesian Design`** button to run the process.
 
 
 ![bayesian1](https://github.com/studentgpt/MlCOFSyn/blob/main/image/design2.png)
@@ -210,17 +208,32 @@ If you find this project helpful, please cite our papers:
 
 2. **Taming Two-Dimensional Polymerization by a Machine-Learning Discovered Crystallization Model**  
    DOI: [`https://doi.org/10.1002/anie.202408937`](https://doi.org/10.1002/anie.202408937)
+   ```
+   @article{https://doi.org/10.1002/anie.202408937,
+   author = {Tian, Jiaxin and Treaster, Kiana A. and Xiong, Liangtao and Wang, Zixiao and Evans, Austin M. and Li, Haoyuan},
+   title = {Taming Two-Dimensional Polymerization by a Machine-Learning Discovered Crystallization Model},
+   journal = {Angewandte Chemie International Edition},
+   volume = {63},
+   number = {39},
+   pages = {e202408937},
+   doi = {https://doi.org/10.1002/anie.202408937},
+   url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/anie.202408937},
+   eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/anie.202408937},
+   year = {2024}
+   }
+   ```
+
 
 
 ## References
 
-[1] Tian, J.; Treaster, K. A.; Xiong, L.; Wang, Z.; Evans, A. M.; Li, H. Taming Two-Dimensional Polymerization by a Machine-Learning Discovered Crystallization Model. Angew. Chem. Int. Ed. 2024, 63 (39), e202408937.
+[1] Li, H.; Chavez, A. D.; Li, H.; Li, H.; Dichtel, W. R.; Bredas, J.-L. Nucleation and Growth of Covalent Organic Frameworks from Solution: The Example of COF-5. J. Am. Chem. Soc. 2017, 139 (45), 16310–16318.
 
-[2] Li, H.; Evans, A. M.; Dichtel, W. R.; Bredas, J.-L. Quantitative Description of the Lateral Growth of Two-Dimensional Covalent Organic Frameworks Reveals Self-Templation Effects. ACS Mater. Lett. 2021, 3 (4), 398–405.
+[2]	Li, H.; Li, H.; Dai, Q.; Li, H.; Brédas, J.-L. Hydrolytic Stability of Boronate Ester-Linked Covalent Organic Frameworks. Adv. Theor. Simul. 2018, 1 (2), 1700015.
 
-[3] Li, H.; Chavez, A. D.; Li, H.; Li, H.; Dichtel, W. R.; Bredas, J.-L. Nucleation and Growth of Covalent Organic Frameworks from Solution: The Example of COF-5. J. Am. Chem. Soc. 2017, 139 (45), 16310–16318.
+[3] Tian, J.; Treaster, K. A.; Xiong, L.; Wang, Z.; Evans, A. M.; Li, H. Taming Two-Dimensional Polymerization by a Machine-Learning Discovered Crystallization Model. Angew. Chem. Int. Ed. 2024, 63 (39), e202408937.
 
-[4]	Li, H.; Li, H.; Dai, Q.; Li, H.; Brédas, J.-L. Hydrolytic Stability of Boronate Ester-Linked Covalent Organic Frameworks. Adv. Theor. Simul. 2018, 1 (2), 1700015.
+[4] Li, H.; Evans, A. M.; Dichtel, W. R.; Bredas, J.-L. Quantitative Description of the Lateral Growth of Two-Dimensional Covalent Organic Frameworks Reveals Self-Templation Effects. ACS Mater. Lett. 2021, 3 (4), 398–405.
 
 [5] ChemRxiv----------
 
