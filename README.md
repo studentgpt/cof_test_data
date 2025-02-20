@@ -57,7 +57,7 @@ python NEgen1_start.py
 
 **After starting up the GUI:**
 
-- **`Set COF Parameters`** Button: Click this button to adjust the material parameters of the 2D COF, which can be determined through experimental measurements and reaction pathway analysis.
+- **`Set COF Parameters`** Button: Click this button to adjust the material parameters of the 2D COF, which can be determined through experimental measurements and reaction pathway analysis<sup>[1][2]</sup>.
 
 - The **Initial System**: This section enables you to define the initial conditions of the system, such as the initial volume, initial nuclei concentration, diameter, and height.
 
@@ -161,7 +161,7 @@ python main_ui_design.py
 
 ## A brief description of the theory
 
-The NEgen1 model<sup>[1]</sup> was derived from kinetic Monte Carlo simulation results. This model takes six parameters for the 2D COF and those for COF-5 are used as default as provided in the code.<sup>[1][2]</sup>Methods to derive the parameters for the other 2D COFs can be found in literature.<sup>[3][4]</sup> The NEgen1o model is optimized upon the NEgen1 model for efficiency while not affecting accuracy.<sup>[5]</sup>
+The NEgen1 model<sup>[3]</sup> was derived from kinetic Monte Carlo simulation results. This model takes six parameters for the 2D COF and those for COF-5 are used as default as provided in the code.<sup>[3][4]</sup>Methods to derive the parameters for the other 2D COFs can be found in literature.<sup>[1][2]</sup> The NEgen1o model is optimized upon the NEgen1 model for efficiency while not affecting accuracy.<sup>[5]</sup>
 
 The prediction task is performed by directly running the computational engine (the NEgen1o model). The optimization task leverages Bayesian algorithm.<sup>[6]</sup> The design task utilize the MeanBAX<sup>[7]</sup> as the acquisition function.
 
