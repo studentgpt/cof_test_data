@@ -59,7 +59,7 @@ python NEgen1_start.py
 
 - **`Set COF Parameters`** Button: Click this button to adjust the material parameters of the 2D COF, which can be determined through experimental measurements and reaction pathway analysis.
 
-- The **Initial System**: This section enables you to define the initial conditions of the system, such as the initial volume, nuclei concentration, diameter, and height.
+- The **Initial System**: This section enables you to define the initial conditions of the system, such as the initial volume, initial nuclei concentration, diameter, and height.
 
 - The **Conditions to Add Monomer**: In this section, you are required to input the **Monomer (core) Concentration** first, followed by the **Monomer Addition Sequence**, which is a list of the monomer volume added at each time (in L). Once the **Monomer Addition Sequence** is entered, you may click the `Check Input` button to display the corresponding **Number of Additions** and the **Total Added Volume**.
 
