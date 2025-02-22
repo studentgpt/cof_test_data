@@ -73,15 +73,15 @@ The **monomer addition sequence** is a numeral list separated by commas. Example
 ![image1](https://github.com/studentgpt/MlCOFSyn/blob/main/image/NEgen1o_1_1.png)
 <img src="https://github.com/studentgpt/MlCOFSyn/blob/main/image/function1.png" alt="image2" width="300" height="auto">
 
-**1.2  `Run Computational Engine` section:**
+**1.2  `Run Computational Engine` panel:**
 
-In this section, you can initiate the calculation by clicking the `Run` button to execute the NEgen1o model. Once the model starts running, you can view detailed computational information directly from the panel in real-time.
+In this panel, you can start the calculation by clicking the Run button to execute the NEgen1o model, which is currently supported in MlCOFSyn. You can view detailed output information in the panel in real-time.
 
 ![image3](https://github.com/studentgpt/test1/blob/main/image/NEgen1o_3.png)
 
-🚨 **Before Running the next monomer addition sequence calculation with the same number of additions, please ensure that all addition sequence files with the same number of additions (e.g., `nuc__1_0_x`, where `x`is identical) in the `MlCOFSyn\negen1o` directory are first backed up to another folder or deleted. Otherwise, the program will not run when you click `Run`**
+🚨 **Based on the input monomer addition sequence, a `nuc__1_0_x`((where x represents the number of times a monomer is added to the sequence) file will be automatically generated MlCOFSyn\negen1o directory. Remove this file before inputing a different monomer addition sequence in a new Prediction task.**
 
-**1.3 Finally, click `Get Result Summary` in the "Post Processing" section to view all the corresponding results, including detailed data and crystal distribution.**
+**1.3 By clicking `Get Result Summary` Button in the `Post Processing` Panel section, the user can view the results including the final crystal distribution.**
 ![image4](https://github.com/studentgpt/MlCOFSyn/blob/main/image/Negen1o_4.png)
 
 ### **2.Optimization Task**
@@ -94,13 +94,14 @@ In this section, you can initiate the calculation by clicking the `Run` button t
    python main_ui_optimization.py
    ```
 
-**2.2** After launching the program, you will enter the **Bayesian Optimization GUI**. To proceed, first click **`Set COF parameters`** to Set the COF parameters, and then input the **Monomer Concentration**.
+**2.2** After launching the program, you will enter the **Bayesian Optimization GUI**. The user can modify the material parameters by clicking the **`Set COF parameters`** button.
 
-**2.3** After entering the initial parameters, follow these steps to begin the Bayesian optimization process:
+**2.3** Set the parameters for monomer addition:
 
-  1. **Load Monomer Addition Sequence Space File**:  
-     Upload the file containing the monomer addition sequence space to be optimized.
-     The reaction space must be in CSV format with the following structure:
+  1. The core monomer concentration can be typed in the **Monomer Concentration** window.
+
+  2. **Load Monomer Addition Sequence Space File:**
+     Upload the file containing the monomer addition sequence space to be optimized. This file is in CSV format with the following format:
   ```bash
      r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20
   
@@ -109,24 +110,25 @@ In this section, you can initiate the calculation by clicking the `Run` button t
      0.031,0.036,0.07,0.054,0.021,0.086,0.027,0.012,0.092,0.013,0.089,0.075,0.028,0.028,0.088,0.071,0.076,0.019,0.022,0.062
 
    ```
-  - The first row contains feature names.
-  - The following rows represent monomer addition sequences.
+  - The first row indicates the addition times.
+  - The remaining rows represent all specified monomer addition sequences.
   - You can find data examples in the file: `MlCOFSyn\optimization\space\all_space.csv`
-  - To ensure the proper functioning of the surrogate model, **please make sure that all monomer addition sequences in the `reaction_space.csv` have the same number of features** (use `0` to fill any empty spaces).
+  - **All monomer addition sequences in the reaction_space.csv must have the same number of length** (use 0 to fill empty additions).
   
   2. **Stop Conditions**:  
   - Input the **Maximum Number of Iterations**.  
   - Specify the **No-Improvement Criterion** as a stop condition.  
   
   3. **Start the Optimization**:  
-     Once the **monomer addition sequence space file** and **stop conditions** are confirmed, click the **`Start Bayesian Optimization`** button to run the process.
+     Once the **monomer addition sequence space file** is loaded and the **stop conditions** are set, click the **`Start Bayesian Optimization`** button to run the program.
 
-The **Maximum Q value** and its corresponding **monomer addition sequence** will be displayed on the interface, and all other results will be saved to `optimization/result.csv`.
+The **Maximum Q value** and its corresponding **monomer addition sequence** will be displayed, and all other results will be saved to `optimization/result.csv`.
  
 
 
 ![bayesian1](https://github.com/studentgpt/test1/blob/main/image/bayesian_1.png)
 
+🚨**The Candidates Per Iteration should be less than or equal to the number of cores n to avoid system overload.**
 
 ### **3.Design Task**
 **3.1 Run the following command to launch the Bayesian Design GUI:**
@@ -136,35 +138,33 @@ cd MlCOFSyn\design\multibax-sklearn-main
 ```bash
 python main_ui_design.py
    ```
-**3.2** After launching the program, you will enter the **Bayesian Design GUI**. To proceed, first click **`Set COF parameters`** to set the COF parameters, and then input the **Monomer Concentration**.
+**3.2** After launching the program, you will enter the **Bayesian Design GUI**. The user can modify the material parameters by clicking the **`Set COF parameters button`**.
 
 **3.3** After entering the initial parameters, follow these steps to begin the Bayesian Design process:
-1. **Load Monomer Addition Sequence Space File**:
-   The reaction space format for the **Bayesian Design** task is **identical** to the one used in the **Bayesian Optimization** task.
+1. The core monomer concentration can be typed in the Monomer Concentration window.
+
+2.  **Load Monomer Addition Sequence Space File:**: The reaction space format for the **Bayesian Design** task is the same as in the **Bayesian Optimization** task.
 
    You can find data examples in the file: `MlCOFSyn/design/multibax-sklearn-main/dataset/all_space.csv`
-
-2.  **Stop Conditions**:  
-  - Input the **Maximum Number of Iterations**.  
-  - Specify the **Number of Design Sequences** as a stop condition.
        
-3. **Target Q range**：
-   Please input the target range for the Q you aim to design.
+3. **Target Q range**：The target Q range that the user aim to achieve.
    
-4.**Start the Design**:
-   Once the **monomer addition sequence space file**, **stop conditions**, and **target Q range** are confirmed, click the **`Start Bayesian Design`** button to run the process.
+4.**Stop Conditions**:
 
+   - Input the **Maximum Number of Iterations**.
+   - Specify the **Number of Monomer Addition Sequences Found**.
 
-![bayesian1](https://github.com/studentgpt/MlCOFSyn/blob/main/image/design2.png)
+**3.4** **Start the Design:** Once the **monomer addition sequence space file** is loaded and the **stop conditions** and **target Q range** are set, click the **`Start Bayesian Design`** button to run the program.
+![design2](https://github.com/studentgpt/MlCOFSyn/blob/main/image/design2.png)
 
    
-🚨**Please verify the number of tasks and cores before submission to avoid system overload.**
+🚨**The Candidates Per Iteration should be less than or equal to the number of cores n to avoid system overload.**
 
 ## A brief description of the theory
 
 The NEgen1 model<sup>[3]</sup> was derived from kinetic Monte Carlo simulation results. This model takes six parameters for the 2D COF and those for COF-5 are used as default as provided in the code.<sup>[3][4]</sup>Methods to derive the parameters for the other 2D COFs can be found in literature.<sup>[1][2]</sup> The NEgen1o model is optimized upon the NEgen1 model for efficiency while not affecting accuracy.<sup>[5]</sup>
 
-The prediction task is performed by directly running the computational engine (the NEgen1o model). The optimization task leverages Bayesian algorithm.<sup>[6]</sup> The design task utilize the MeanBAX<sup>[7]</sup> as the acquisition function.
+The prediction task is performed by directly running the computational engine (currently the NEgen1o model). The optimization task leverages Bayesian algorithm.<sup>[6]</sup> The design task utilize the MeanBAX<sup>[7]</sup> as the acquisition function.
 
 A detailed technical description can be found at: https://chemrxiv.org/XXX and https://doi.org/10.1002/anie.202408937
 
