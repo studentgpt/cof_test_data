@@ -5,10 +5,10 @@
 ![Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-brown.svg)
 ![Windows Badge](https://img.shields.io/badge/Platform-Windows-blue)
 
-MlCOFSyn is a machine learning framework designed for the synthesis of two-dimensional covalent organic frameworks (2D COFs). MlCOFSyn leverages machine learning algorithms and features an intuitive graphical interface, enabling it to be run on consumer-grade computers by non-experts. The MlCOFSyn framework currently integrates the NEgen1o model as the computational engine and has the following functionalities:
+MlCOFSyn is a machine learning framework designed for assist in the synthesis of two-dimensional covalent organic frameworks (2D COFs). MlCOFSyn leverages efficient machine learning algorithms and features an intuitive graphical interface, enabling it to be run on consumer-grade computers by non-experts. The MlCOFSyn framework currently integrates the NEgen1o model as the computational engine and has the following functionalities:
 
-1. ​**Prediction**​: Predicts the crystal size based on the input monomer addition sequence.
-2. ​**Design**​: Derives the required monomer addition sequence by specifying the target crystal size.
+1. ​**Prediction**​: Predicts the crystal size distributions based on the input monomer addition sequence.
+2. ​**Design**​: Reverse-engineer the required monomer addition sequence for the target crystal size.
 3. ​**Optimization**​: Optimizes the monomer addition sequence to produce larger crystals.
 
 ## Installation
@@ -17,14 +17,14 @@ MlCOFSyn is a machine learning framework designed for the synthesis of two-dimen
 git clone https://github.com/studentgpt/MlCOFSyn.git
 ```
 
-2.install environment requirements
+2.The required libraries can be installed by running the following command:
 
 ```bash
 pip install -r requirements.txt
 ```
 
 
-## Requirement for running MlCOFSyn
+## Requirements for running MlCOFSyn
 ### Python Libraries
 The following Python libraries must be installed:
 - numpy
@@ -45,7 +45,7 @@ The following Python libraries must be installed:
 
 
 ### **1.Prediction Task**
-**1.1 Run the following command to launch the the NEgen1o Graphical User Interface(GUI):** 
+**1.1 Run the following command to launch the the NEgen1o Graphical User Interface (GUI):** 
 ```bash
 cd MlCOFSyn\prediction
 ```
@@ -54,19 +54,21 @@ python NEgen1_start.py
 ```
 
 
-**After starting up the GUI:**
+After starting up the GUI, you will see the **System and Parameters** Panel:
 
-- **`Set COF Parameters`** Button: Click this button to adjust the material parameters of the 2D COF, which can be determined through experimental measurements and reaction pathway analysis<sup>[1][2]</sup>.
+- **`Set COF Parameters`** Button: Click this button to set the parameters for the 2D COF, which can be determined through experimental measurements and reaction pathway analysis<sup>[1][2]</sup>.Default parameters are for COF-5.
 
-- The **Initial System**: This section enables you to define the initial conditions of the system, such as the initial volume, initial nuclei concentration, diameter, and height.
+- The **Initial System** Section: This section enables the user to define the initial conditions of the system, such as the initial volume, initial nuclei concentration, diameter, and height.
 
-- The **Conditions to Add Monomer**: In this section, you are required to input the **Monomer (core) Concentration** first, followed by the **Monomer Addition Sequence**, which is a list of the monomer volume added at each time (in L). Once the **Monomer Addition Sequence** is entered, you may click the `Check Input` button to display the corresponding **Number of Additions** and the **Total Added Volume**.
+- The **Conditions to Add Monomer** Section: In this section, the user can input the **Monomer (core unit) Concentration** and the **Monomer Addition Sequence**. The latter is a list of the monomer volume added at each time (in L; **assuming core and linker monomers are already combined in solution before addition into the system**). Note that the NEgen1o model works under stoichiometric monomer ratios thus **only the concentration of the core monomer is needed for input**.
 
-The **monomer addition sequence** can be entered in the following format:
+- Once the **Monomer Addition Sequence** is entered, you may click the Check Input button to check the **Number of Additions** and the **Total Volume to Add**.
 
-* `0.019,0.037,0.055,0.073,0.091,0.109,0.127,0.145,0.163,0.181` represents increasing-rate addition
+The **monomer addition sequence** is a numeral list separated by commas. Examples include:
 
-* `1` represents a single addition
+* `0.019,0.037,0.055,0.073,0.091,0.109,0.127,0.145,0.163,0.181` represents an increasing-rate addition sequence
+
+* `1` represents a single addition (add all monomers at once)
 
 ![image1](https://github.com/studentgpt/MlCOFSyn/blob/main/image/NEgen1o_1_1.png)
 <img src="https://github.com/studentgpt/MlCOFSyn/blob/main/image/function1.png" alt="image2" width="300" height="auto">
