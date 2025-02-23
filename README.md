@@ -5,7 +5,7 @@
 ![Apache License 2.0](https://img.shields.io/badge/License-Apache%202.0-brown.svg)
 ![Windows Badge](https://img.shields.io/badge/Platform-Windows-blue)
 
-MlCOFSyn is a machine learning framework designed for assist in the synthesis of two-dimensional covalent organic frameworks (2D COFs). MlCOFSyn leverages efficient machine learning algorithms and features an intuitive graphical interface, enabling it to be run on consumer-grade computers by non-experts. The MlCOFSyn framework currently integrates the NEgen1o model as the computational engine and has the following functionalities:
+MlCOFSyn is a machine learning framework designed to assist in the synthesis of two-dimensional covalent organic frameworks (2D COFs). MlCOFSyn leverages efficient machine learning algorithms and features an intuitive graphical interface, enabling it to be run on consumer-grade computers by non-experts. The MlCOFSyn framework currently integrates the NEgen1o model as the computational engine and has the following functionalities:
 
 1. ​**Prediction**​: Predicts the crystal size distributions based on the input monomer addition sequence.
 2. ​**Design**​: Reverse-engineer the required monomer addition sequence for the target crystal size.
