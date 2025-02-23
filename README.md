@@ -79,7 +79,7 @@ In this panel, you can start the calculation by clicking the `Run` button to exe
 
 ![image3](https://github.com/studentgpt/test1/blob/main/image/NEgen1o_3.png)
 
-🚨 **Based on the input monomer addition sequence, a `nuc__1_0_x`(where x represents the number of times a monomer addition sequence) file will be automatically generated MlCOFSyn\negen1o directory. Remove this file before inputing a different monomer addition sequence in a new Prediction task.**
+🚨 **Based on the input monomer addition sequence, a `nuc__1_0_x`(where x represents the number of additions in a monomer addition sequence) file will be automatically generated MlCOFSyn\negen1o directory. Remove this file before inputing a different monomer addition sequence in a new Prediction task.**
 
 **1.3 By clicking `Get Result Summary` Button in the `Post Processing` Panel section, the user can view the results including the final crystal distribution.**
 ![image4](https://github.com/studentgpt/MlCOFSyn/blob/main/image/Negen1o_4.png)
