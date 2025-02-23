@@ -54,15 +54,15 @@ python NEgen1_start.py
 ```
 
 
-After starting up the GUI, you will see the **System and Parameters** Panel:
+After starting up the GUI, you will see the **`System and Parameters`** Panel:
 
 - **`Set COF Parameters`** Button: Click this button to set the parameters for the 2D COF, which can be determined through experimental measurements and reaction pathway analysis<sup>[1][2]</sup>.Default parameters are for COF-5.
 
-- The **Initial System** Section: This section enables the user to define the initial conditions of the system, such as the initial volume, initial nuclei concentration, diameter, and height.
+- The **Initial System** Section: This section allows the user to define the initial conditions of the system, such as the initial volume, initial nuclei concentration, diameter, and height.
 
 - The **Conditions to Add Monomer** Section: In this section, the user can input the **Monomer (core unit) Concentration** and the **Monomer Addition Sequence**. The latter is a list of the monomer volume added at each time (in L; **assuming core and linker monomers are already combined in solution before addition into the system**). Note that the NEgen1o model works under stoichiometric monomer ratios thus **only the concentration of the core monomer is needed for input**.
 
-- Once the **Monomer Addition Sequence** is entered, you may click the Check Input button to check the **Number of Additions** and the **Total Volume to Add**.
+- Once the **Monomer Addition Sequence** is entered, you may click the `Check Input` button to check the **Number of Additions** and the **Total Volume to Add**.
 
 The **monomer addition sequence** is a numeral list separated by commas. Examples include:
 
@@ -75,11 +75,11 @@ The **monomer addition sequence** is a numeral list separated by commas. Example
 
 **1.2  `Run Computational Engine` panel:**
 
-In this panel, you can start the calculation by clicking the Run button to execute the NEgen1o model, which is currently supported in MlCOFSyn. You can view detailed output information in the panel in real-time.
+In this panel, you can start the calculation by clicking the `Run` button to execute the NEgen1o model, which is currently supported in MlCOFSyn. You can view detailed output information in the panel in real-time.
 
 ![image3](https://github.com/studentgpt/test1/blob/main/image/NEgen1o_3.png)
 
-🚨 **Based on the input monomer addition sequence, a `nuc__1_0_x`((where x represents the number of times a monomer is added to the sequence) file will be automatically generated MlCOFSyn\negen1o directory. Remove this file before inputing a different monomer addition sequence in a new Prediction task.**
+🚨 **Based on the input monomer addition sequence, a `nuc__1_0_x`(where x represents the number of times a monomer addition sequence) file will be automatically generated MlCOFSyn\negen1o directory. Remove this file before inputing a different monomer addition sequence in a new Prediction task.**
 
 **1.3 By clicking `Get Result Summary` Button in the `Post Processing` Panel section, the user can view the results including the final crystal distribution.**
 ![image4](https://github.com/studentgpt/MlCOFSyn/blob/main/image/Negen1o_4.png)
@@ -113,7 +113,7 @@ In this panel, you can start the calculation by clicking the Run button to execu
   - The first row indicates the addition times.
   - The remaining rows represent all specified monomer addition sequences.
   - You can find data examples in the file: `MlCOFSyn\optimization\space\all_space.csv`
-  - **All monomer addition sequences in the reaction_space.csv must have the same number of length** (use 0 to fill empty additions).
+  - **All monomer addition sequences in the `reaction_space.csv` must have the same number of length** (use 0 to fill empty additions).
   
   2. **Stop Conditions**:  
   - Input the **Maximum Number of Iterations**.  
@@ -147,12 +147,12 @@ python main_ui_design.py
 
    You can find data examples in the file: `MlCOFSyn/design/multibax-sklearn-main/dataset/all_space.csv`
        
-3. **Target Q range**：The target Q range that the user aim to achieve.
+3. **Target Q range**：The target Q range that the user aims to achieve.
    
-4.**Stop Conditions**:
-
+4. **Stop Conditions**:
    - Input the **Maximum Number of Iterations**.
    - Specify the **Number of Monomer Addition Sequences Found**.
+   
 
 **3.4** **Start the Design:** Once the **monomer addition sequence space file** is loaded and the **stop conditions** and **target Q range** are set, click the **`Start Bayesian Design`** button to run the program.
 ![design2](https://github.com/studentgpt/MlCOFSyn/blob/main/image/design2.png)
